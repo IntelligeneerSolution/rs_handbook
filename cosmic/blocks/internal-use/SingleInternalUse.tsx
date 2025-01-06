@@ -33,7 +33,7 @@ export async function SingleInternalUse({
             {/* 返回博客按钮 */}
             <div className="lg:absolute lg:-left-[170px] lg:top-2">
               <Link
-                href="/blog"
+                href="/internal-uses"
                 className="flex text-sky-500 dark:text-sky-400"
               >
                 <ArrowLeftIcon className="mr-2 mt-1 h-4 w-4" /> Back to blog
@@ -109,7 +109,7 @@ export async function SingleInternalUse({
             {/* 返回博客按钮 */}
             <div className="my-10">
               <Link
-                href="/blog"
+                href="/internal-uses"
                 className="flex text-sky-500 dark:text-sky-400"
               >
                 <ArrowLeftIcon className="mr-2 mt-1 h-4 w-4" /> Back to blog
