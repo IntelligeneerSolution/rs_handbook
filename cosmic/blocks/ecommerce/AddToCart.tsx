@@ -27,7 +27,7 @@ export function AddToCart({
   product: ProductType;
   className?: string;
 }) {
-  const { setCart, setCartOpen } = useContext(CartContext);
+  // const { setCart, setCartOpen } = useContext(CartContext);
   let cart: ProductType[] = [];
   if (typeof window !== "undefined") {
     cart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -35,7 +35,7 @@ export function AddToCart({
   function addProduct(cartItem: ProductType) {
     cart.push(cartItem);
     localStorage.setItem("cart", JSON.stringify(cart));
-    setTimeout(() => setCartOpen(true), 500);
+    // setTimeout(() => setCartOpen(true), 500);
   }
 
   function removeProduct(productId: string) {
@@ -62,7 +62,7 @@ export function AddToCart({
       addProduct(product);
     }
     await setTimeout(() => setSubmitting(false), 500);
-    setCart(JSON.parse(localStorage.getItem("cart") || "[]"));
+    // setCart(JSON.parse(localStorage.getItem("cart") || "[]"));
   }
   const inCart = productInCart(product);
   return (
