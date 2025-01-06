@@ -29,8 +29,8 @@ export default async function Footer() {
             // query={{ type: "navigation-menus", slug: "header" }}
             className="flex flex-wrap items-center"
             hasMobileMenu={true}
-            showInternal={false}
-            searchParams={{}}
+            // showInternal={false}
+            // searchParams={{}}
           />
         {/*  <NavMenu*/}
         {/*    // query={{ type: "navigation-menus", slug: "header" }}*/}
