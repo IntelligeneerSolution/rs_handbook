@@ -1,18 +1,45 @@
-// components/header.tsx
+"use client";
 import Link from "next/link";
 import { cosmic } from "@/cosmic/client";
 import { NavMenu } from "@/cosmic/blocks/navigation-menu/NavMenu";
-import { CheckOut } from "@/cosmic/blocks/ecommerce/CheckOut";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "@/cosmic/blocks/ecommerce/CartProvider";
 
-export default async function Header() {
-  // Header data
-  const { object: settings } = await cosmic.objects
-    .findOne({
-      type: "global-settings",
-      slug: "settings",
-    })
-    .props("metadata")
-    .depth(1);
+export default function Header() {
+  const { showInternal, setShowInternal } = useContext(CartContext);
+  const [settings, setSettings] = useState<any>(null);
+
+  // 从 Cosmic 加载设置数据
+  useEffect(() => {
+    async function fetchSettings() {
+      try {
+        const { object } = await cosmic.objects
+          .findOne({
+            type: "global-settings",
+            slug: "settings",
+          })
+          .props("slug,title,metadata,type")
+          .depth(1);
+        // console.log("object",object);
+        setSettings(object);
+        // console.log("new object",object);
+        // console.log("setting",settings);
+      } catch (error) {
+        console.error("Error fetching settings from Cosmic:", error);
+      }
+    }
+
+    fetchSettings();
+
+    // 从 URL 获取 showInternal 参数
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("showInternal") === "true") {
+      setShowInternal(true);
+    }
+  }, [setShowInternal]);
+  if (!settings) {
+  return <p>Loading settings...</p>;
+}
 
   return (
     <nav className="sticky top-0 bg-white/20 dark:bg-black/20 backdrop-blur-lg w-full z-[9999]">
@@ -31,11 +58,9 @@ export default async function Header() {
         </Link>
         <div className="flex items-center flex-wrap">
           <NavMenu
-            query={{ type: "navigation-menus", slug: "header" }}
-            hasMobileMenu
-            className="flex flex-wrap"
+            className="flex flex-wrap items-center"
+            hasMobileMenu={true}
           />
-          <CheckOut className="ml-4" productPath={"/services"} />
         </div>
       </div>
     </nav>

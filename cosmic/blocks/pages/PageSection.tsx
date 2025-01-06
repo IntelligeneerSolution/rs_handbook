@@ -35,19 +35,19 @@ export function Section({
               className="mb-6"
               dangerouslySetInnerHTML={{ __html: section.content }}
             />
-            <div>
-              <Link
-                className={cn(
-                  "ml-2",
-                  buttonVariants({
-                    variant: "secondary",
-                  })
-                )}
-                href={section.cta_link}
-              >
-                {section.cta_text}
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link*/}
+            {/*    className={cn(*/}
+            {/*      "ml-2",*/}
+            {/*      buttonVariants({*/}
+            {/*        variant: "secondary",*/}
+            {/*      })*/}
+            {/*    )}*/}
+            {/*    href={section.cta_link}*/}
+            {/*  >*/}
+            {/*    {section.cta_text}*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
           </div>
           <div>
             <img
@@ -73,19 +73,19 @@ export function Section({
               className="mb-6"
               dangerouslySetInnerHTML={{ __html: section.content }}
             />
-            <div>
-              <Link
-                className={cn(
-                  "ml-2",
-                  buttonVariants({
-                    variant: "secondary",
-                  })
-                )}
-                href={section.cta_link}
-              >
-                {section.cta_text}
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link*/}
+            {/*    className={cn(*/}
+            {/*      "ml-2",*/}
+            {/*      buttonVariants({*/}
+            {/*        variant: "secondary",*/}
+            {/*      })*/}
+            {/*    )}*/}
+            {/*    href={section.cta_link}*/}
+            {/*  >*/}
+            {/*    {section.cta_text}*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
           </div>
         </div>
       )}
@@ -97,19 +97,19 @@ export function Section({
               className="mb-6"
               dangerouslySetInnerHTML={{ __html: section.content }}
             />
-            <div>
-              <Link
-                className={cn(
-                  "ml-2",
-                  buttonVariants({
-                    variant: "secondary",
-                  })
-                )}
-                href={section.cta_link}
-              >
-                {section.cta_text}
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link*/}
+            {/*    className={cn(*/}
+            {/*      "ml-2",*/}
+            {/*      buttonVariants({*/}
+            {/*        variant: "secondary",*/}
+            {/*      })*/}
+            {/*    )}*/}
+            {/*    href={section.cta_link}*/}
+            {/*  >*/}
+            {/*    {section.cta_text}*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
           </div>
           <div>
             <img

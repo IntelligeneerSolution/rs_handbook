@@ -22,6 +22,7 @@ export async function Page({
       .depth(1)
       .status(status ? status : "published");
 
+
     return (
       <div className={className}>
         <div className="mx-auto flex w-full max-w-6xl flex-col-reverse justify-between p-4 pb-16 text-zinc-950 dark:text-zinc-50 md:flex-row md:gap-12">
@@ -34,32 +35,6 @@ export async function Page({
             <div className="pb-8">
               <div className="text-xl text-zinc-700 dark:text-zinc-300">
                 {page.metadata.subheadline}
-              </div>
-            </div>
-            <div className="w-full md:pb-20">
-              <div className="flex w-full gap-4 md:w-max">
-                <Link
-                  className={cn(
-                    "w-full md:w-max",
-                    buttonVariants({
-                      variant: "default",
-                    })
-                  )}
-                  href="/signup"
-                >
-                  Get started free
-                </Link>
-                <Link
-                  className={cn(
-                    "w-full md:w-max",
-                    buttonVariants({
-                      variant: "secondary",
-                    })
-                  )}
-                  href="/contact"
-                >
-                  Contact us
-                </Link>
               </div>
             </div>
           </div>
@@ -86,10 +61,12 @@ export async function Page({
               className="m-auto mb-16 max-w-[800px] text-center text-zinc-700 dark:text-zinc-300"
             />
             <div className="grid gap-y-28">
-              {page.metadata.sections.map((section: any) => {
-                return <Section key={section.heading} section={section} />;
-              })}
+              {Array.isArray(page.metadata.sections) &&
+                  page.metadata.sections.map((section: any, index: number) => (
+                      <Section key={section.heading || `section-${index}`} section={section}/>
+                  ))}
             </div>
+
           </div>
         </section>
       </div>

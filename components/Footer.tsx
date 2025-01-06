@@ -25,27 +25,20 @@ export default async function Footer() {
   return (
     <nav className="pb-8 md:my-10 mx-auto flex flex-col lg:flex-row items-center justify-between container w-full">
       <div className="my-8">
-        <NavMenu query={{ type: "navigation-menus", slug: "footer" }} />
-      </div>
-      <div className="flex mb-6 lg:mb-0 gap-x-8 justify-center text-zinc-700 dark:text-zinc-300">
-        <div>
-          <a
-            href={`mailto:${settings.metadata.email}`}
-            className={buttonVariants({ variant: "outline" })}
-          >
-            <MailIcon className="w-4 inline-block mr-2" />
-            Email us
-          </a>
-        </div>
-        <div>
-          <a
-            href={`tel:${settings.metadata.phone}`}
-            className={buttonVariants({ variant: "outline" })}
-          >
-            <PhoneIcon className="w-4 inline-block mr-2" />
-            Call us
-          </a>
-        </div>
+        <NavMenu
+            // query={{ type: "navigation-menus", slug: "header" }}
+            className="flex flex-wrap items-center"
+            hasMobileMenu={true}
+            showInternal={false}
+            searchParams={{}}
+          />
+        {/*  <NavMenu*/}
+        {/*    // query={{ type: "navigation-menus", slug: "header" }}*/}
+        {/*    className="flex flex-wrap items-center"*/}
+        {/*    hasMobileMenu={true}*/}
+        {/*    showInternal={searchParams?.showInternal === "true"}// 将解析的参数传递给 NavMenu*/}
+        {/*    searchParams={searchParams} // 确保传递 searchParams*/}
+        {/*  />*/}
       </div>
       <div className="flex gap-x-8 justify-center mb-6 lg:mb-0">
         {settings.metadata.links.map((link: Link) => {

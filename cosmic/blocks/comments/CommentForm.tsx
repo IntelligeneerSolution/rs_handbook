@@ -37,7 +37,7 @@ export function CommentForm({
       metadata: {
         email,
         comment,
-        resource: resourceId, // Add resource id here such as blog post or product id
+        resource: resourceId, // Add resource id here such as user-guides post or product id
       },
     };
     try {

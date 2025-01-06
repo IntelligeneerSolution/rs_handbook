@@ -6,8 +6,6 @@ import { cn } from "@/cosmic/utils";
 
 import { MenuIcon, XIcon } from "lucide-react";
 import { ItemType } from "./NavMenu";
-import { AuthButtons } from "../user-management/AuthButtons";
-
 export function MobileNav({
   items,
   className,
@@ -44,7 +42,6 @@ export function MobileNav({
                 </Link>
               );
             })}
-            <AuthButtons />
           </div>
         </div>
       )}
