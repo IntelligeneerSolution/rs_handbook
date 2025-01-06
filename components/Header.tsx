@@ -44,7 +44,7 @@ export default function Header() {
   return (
     <nav className="sticky top-0 bg-white/20 dark:bg-black/20 backdrop-blur-lg w-full z-[9999]">
       <div className="flex w-full items-center md:container justify-between p-4 flex-wrap gap-4">
-        <Link href="https://www.adatop.com.au/" className="flex-shrink-0">
+        <Link href="/" className="flex-shrink-0">
           <img
             src={`${settings.metadata.logo.imgix_url}?w=500&auto=format,compression`}
             alt={settings.metadata.company}
