@@ -1,4 +1,4 @@
-// app/user-guides/[slug]/page.tsx
+  // app/user-guides/[slug]/page.tsx
 import { SingleBlog } from "@/cosmic/blocks/user-guides/SingleBlog";
 import { cosmic } from "@/cosmic/client";
 
