@@ -4,6 +4,7 @@ import { cosmic } from "@/cosmic/client";
 import { NavMenu } from "@/cosmic/blocks/navigation-menu/NavMenu";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "@/cosmic/blocks/ecommerce/CartProvider";
+import {ModeToggle} from "@/components/theme-toggle";
 
 export default function Header() {
   const { showInternal, setShowInternal } = useContext(CartContext);
@@ -63,6 +64,7 @@ export default function Header() {
           />
         </div>
       </div>
+      <ModeToggle />
     </nav>
   );
 }

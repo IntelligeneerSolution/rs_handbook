@@ -53,7 +53,7 @@ export default async function Footer() {
           );
         })}
       </div>
-      <ModeToggle />
+      {/*<ModeToggle />*/}
     </nav>
   );
 }
