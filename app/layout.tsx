@@ -15,12 +15,12 @@ const display = Fjalla_One({
 });
 
 export const metadata: Metadata = {
-  title: "ProLine Content Corps - Agency website template by Cosmic",
-  description: "A Cosmic template built with Blocks.",
+  title: "Adatop Handbook",
+  description: "Guide for every user.",
   openGraph: {
-    title: "ProLine Content Corps - Agency website template by Cosmic",
-    description: "A Cosmic template built with Blocks.",
-    images: "https://imgix.cosmicjs.com/path/to/image.png?auto=format,compression",
+    title: "Adatop Handbook",
+    description: "Guide for every user.",
+    // images: "https://imgix.cosmicjs.com/path/to/image.png?auto=format,compression",
   },
 };
 
